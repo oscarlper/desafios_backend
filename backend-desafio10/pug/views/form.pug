@@ -1,0 +1,47 @@
+html
+    head 
+        title="Listado de productos"
+
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    body
+        center
+            H1(style="color: #0000aa;")='Ingrese Producto'
+            form(
+                action='/productos'
+                method='POST'
+                )
+                div(style='width:50%')
+                    label
+                        name='Product'
+                    input(
+                        type='text'
+                        name='title'
+                        class="form-control"
+                        )
+                    label
+                        name='Price'
+                    input(
+                        type='text'
+                        name='price'
+                        class="form-control"
+                        )
+                    label 
+                        name="Image"
+                    input(
+                        type='text'
+                        name='thumbnail'
+                        class="form-control"
+                        )
+                    p
+                    input(
+                        type="submit" 
+                        class="btn btn-primary"
+                        value='Alta Producto'
+                        )
+                    a(
+                    role="button"
+                    class="btn btn-warning"
+                    href='/productos'
+                    name='Lista Productos'
+                    )='Lista Productos'

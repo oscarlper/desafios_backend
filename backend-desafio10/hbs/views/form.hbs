@@ -1,0 +1,21 @@
+<form action="/productos" method="post">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-4 col-sm-4"></div>
+                <div class="col-4 col-sm-4">
+                    <h1 class="text-primary">Ingrese Producto</h1>
+                    <label for="ProductForm" class="form-label">Product</label>
+                    <input class="form-control" type="text" id="ProductForm" placeholder="Product description" name="title">
+                    <label for="priceForm" class="form-label">Price</label>
+                    <input class="form-control" type="text" id="priceForm" placeholder="Product price" name="price">
+                    <label for="imageForm" class="form-label">Image</label>
+                    <input class="form-control" type="text" id="imageForm" placeholder="Enter a image URL" name="thumbnail">
+                    <br>
+                    <input class="btn btn-primary" type="submit" value="Enviar">
+                    <a href="/productos" class="btn btn-warning" role="button">Listar Productos</a>
+                </div>
+            <div class="col-4 col-sm-4"></div>
+        </div>
+    </div>
+</form>

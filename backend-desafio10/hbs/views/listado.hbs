@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-3 col-sm-3"></div>
+            <div class="col-6 col-sm-6">
+            {{#if hasAny}}
+                <h1 class="text-primary">Listado Productos</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each datos}}
+                        <tr>
+                            <td>{{this.id}}</td>
+                            <td>{{this.title}}</td>
+                            <td>{{this.price}}</td>
+                            <td><img width=50px src={{this.thumbnail}}></td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            {{else}}
+                <h1 class="text-danger">No hay productos !!!</h1>
+            {{/if}}
+            <a href="/" class="btn btn-warning" role="button">Ingresar Producto</a>
+            </div>
+        </div>
+    </div>
+</div>
