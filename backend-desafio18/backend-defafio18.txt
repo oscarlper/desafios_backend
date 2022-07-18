@@ -1,0 +1,107 @@
+Comandos CRUD:
+1/2)
+use ecommerce
+db.productos.insertMany([
+    {"timestamp":1657154380091,"title":"Lampara 12W","code":"LED12W","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989049.png","price": 580},
+    {"timestamp":1657154431838,"title":"Candado","code":"lockch01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989028.png","price": 120}, 
+    {"timestamp":1657154479730,"title":"Campana","code":"bellsm01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989073.png","price": 2860},
+    {"timestamp":1657257479730,"title":"Video Camara","code":"vidcam01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340787.png","price": 4990},
+    {"timestamp":1657257479760,"title":"Speaker bluetooth","code":"spkbth20w","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340824.png","price":4320},
+    {"timestamp":1657257479790,"title":"Celular 4G","code":"cel4g128gb","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340753.png","price":1280},
+    {"timestamp":1657257479820,"title":"Lampara Camping","code":"lampCamp5w","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340807.png","price":2300},
+    {"timestamp":1657257479870,"title":"Monocular 10x","code":"monmag10x","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340897.png","price":900},
+    {"timestamp":1657257479910,"title":"Molinillo cafe","code":"molicoffe01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340876.png","price":1700},
+    {"timestamp":1657257480130,"title":"Encendedor acero","code":"encace01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340907.png","price":3350},
+])
+
+db.mensajes.insertMany([
+    {"dateMark":"11/7/2022, 10:47:56","mail":"oscarlper@gmail.com","message":"Primer mensaje"},
+    {"dateMark":"11/7/2022, 10:48:16","mail":"oscarlper@gmail.com","message":"Hola"},
+    {"dateMark":"11/7/2022, 10:48:24","mail":"pirulo@gmail.com","message":"Hola a todos !!!"},
+    {"dateMark":"11/7/2022, 10:48:34","mail":"pirulo@gmail.com","message":"Chau :)"},
+    {"dateMark":"11/7/2022, 10:48:40","mail":"oscar@gmail.com","message":"Chau Pirulo !!!"},
+    {"dateMark":"11/7/2022, 10:48:14","mail":"admin@mongotest.io","message":"Mensaje de prueba"},
+    {"dateMark":"11/7/2022, 10:48:16","mail":"oscarlper@gmail.com","message":"@admin Llego el mensaje de prueba"},
+    {"dateMark":"11/7/2022, 10:48:17","mail":"admin@mongotest.io","message":"Gracias"},
+    {"dateMark":"11/7/2022, 10:48:18","mail":"admin@mongotest.io","message":"Se cierra el chat por mantenimiento"},
+    {"dateMark":"11/7/2022, 10:48:20","mail":"oscarlper@gmail.com","message":"Chau"}
+])
+
+3)
+> show collections
+mensajes
+productos
+
+> db.productos.find({})
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da3"), "timestamp" : 1657154380091, "title" : "Lampara 12W", "code" : "LED12W", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7989/7989049.png", "price" : 580 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da4"), "timestamp" : 1657154431838, "title" : "Candado", "code" : "lockch01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7989/7989028.png", "price" : 120 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da5"), "timestamp" : 1657154479730, "title" : "Campana", "code" : "bellsm01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7989/7989073.png", "price" : 2860 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da6"), "timestamp" : 1657257479730, "title" : "Video Camara", "code" : "vidcam01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340787.png", "price" : 4990 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da7"), "timestamp" : 1657257479760, "title" : "Speaker bluetooth", "code" : "spkbth20w", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340824.png", "price" : 4320 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da8"), "timestamp" : 1657257479790, "title" : "Celular 4G", "code" : "cel4g128gb", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340753.png", "price" : 1280 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da9"), "timestamp" : 1657257479820, "title" : "Lampara Camping", "code" : "lampCamp5w", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340807.png", "price" : 2300 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804daa"), "timestamp" : 1657257479870, "title" : "Monocular 10x", "code" : "monmag10x", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340897.png", "price" : 900 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804dab"), "timestamp" : 1657257479910, "title" : "Molinillo cafe", "code" : "molicoffe01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340876.png", "price" : 1700 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804dac"), "timestamp" : 1657257480130, "title" : "Encendedor acero", "code" : "encace01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340907.png", "price" : 3350 }
+
+> db.mensajes.find({})
+{ "_id" : ObjectId("62d57af91e46e0f0a8804dad"), "dateMark" : "11/7/2022, 10:47:56", "mail" : "oscarlper@gmail.com", "message" : "Primer mensaje" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804dae"), "dateMark" : "11/7/2022, 10:48:16", "mail" : "oscarlper@gmail.com", "message" : "Hola" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804daf"), "dateMark" : "11/7/2022, 10:48:24", "mail" : "pirulo@gmail.com", "message" : "Hola a todos !!!" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804db0"), "dateMark" : "11/7/2022, 10:48:34", "mail" : "pirulo@gmail.com", "message" : "Chau :)" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804db1"), "dateMark" : "11/7/2022, 10:48:40", "mail" : "oscar@gmail.com", "message" : "Chau Pirulo !!!" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804db2"), "dateMark" : "11/7/2022, 10:48:14", "mail" : "admin@mongotest.io", "message" : "Mensaje de prueba" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804db3"), "dateMark" : "11/7/2022, 10:48:16", "mail" : "oscarlper@gmail.com", "message" : "@admin Llego el mensaje de prueba" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804db4"), "dateMark" : "11/7/2022, 10:48:17", "mail" : "admin@mongotest.io", "message" : "Gracias" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804db5"), "dateMark" : "11/7/2022, 10:48:18", "mail" : "admin@mongotest.io", "message" : "Se cierra el chat por mantenimiento" }
+{ "_id" : ObjectId("62d57af91e46e0f0a8804db6"), "dateMark" : "11/7/2022, 10:48:20", "mail" : "oscarlper@gmail.com", "message" : "Chau" }
+
+4)
+> db.productos.countDocuments({})
+10
+> db.mensajes.countDocuments({})
+10
+
+5/a)
+> db.productos.insert({ "timestamp" : 1657257480630, "title" : "Monocular 12x", "code" : "monmag12x", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340897.png", "price" : 990 })
+> db.productos.countDocuments({})
+11
+
+5/b/i)
+> db.productos.find({price:{$lt:1000}})
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da3"), "timestamp" : 1657154380091, "title" : "Lampara 12W", "code" : "LED12W", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7989/7989049.png", "price" : 580 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da4"), "timestamp" : 1657154431838, "title" : "Candado", "code" : "lockch01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7989/7989028.png", "price" : 120 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804daa"), "timestamp" : 1657257479870, "title" : "Monocular 10x", "code" : "monmag10x", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340897.png", "price" : 900 }
+{ "_id" : ObjectId("62d57f487a6ba0cb6301f36e"), "timestamp" : 1657257480630, "title" : "Monocular 12x", "code" : "monmag12x", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340897.png", "price" : 990 }
+
+5/b/ii)
+> db.productos.find({$and:[{price:{$gte:1000}}, {price:{$lte:3000}}]})
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da5"), "timestamp" : 1657154479730, "title" : "Campana", "code" : "bellsm01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7989/7989073.png", "price" : 2860 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da8"), "timestamp" : 1657257479790, "title" : "Celular 4G", "code" : "cel4g128gb", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340753.png", "price" : 1280 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da9"), "timestamp" : 1657257479820, "title" : "Lampara Camping", "code" : "lampCamp5w", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340807.png", "price" : 2300 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804dab"), "timestamp" : 1657257479910, "title" : "Molinillo cafe", "code" : "molicoffe01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340876.png", "price" : 1700 }
+
+5/b/iii)
+> db.productos.find({price:{$gt:3000}})
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da6"), "timestamp" : 1657257479730, "title" : "Video Camara", "code" : "vidcam01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340787.png", "price" : 4990 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804da7"), "timestamp" : 1657257479760, "title" : "Speaker bluetooth", "code" : "spkbth20w", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340824.png", "price" : 4320 }
+{ "_id" : ObjectId("62d57af61e46e0f0a8804dac"), "timestamp" : 1657257480130, "title" : "Encendedor acero", "code" : "encace01", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340907.png", "price" : 3350 }
+
+5/b/iv)
+> db.productos.find().skip(2).limit(1).sort({price:1})
+{ "_id" : ObjectId("62d57af61e46e0f0a8804daa"), "timestamp" : 1657257479870, "title" : "Monocular 10x", "code" : "monmag10x", "thumbnail" : "https://cdn-icons-png.flaticon.com/128/7340/7340897.png", "price" : 900 }
+
+5/c)
+> db.productos.updateMany({},{$set:{stock:100}},{upsert: true})
+{ "acknowledged" : true, "matchedCount" : 11, "modifiedCount" : 11 }
+
+5/d)
+> db.productos.updateMany({price:{$gt:4000}},{$set:{stock:0}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+
+5/e)
+db.productos.deleteMany({price:{$lt:1000}})
+{ "acknowledged" : true, "deletedCount" : 4 }
+
+> db.createUser({user:"pepe", pwd:"asd456", roles:["reader","ecommerce"]})
+
