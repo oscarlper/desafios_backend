@@ -2,16 +2,16 @@ Comandos CRUD:
 1/2)
 use ecommerce
 db.productos.insertMany([
-    {"timestamp":1657154380091,"title":"Lampara 12W","code":"LED12W","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989049.png","price": 580},
-    {"timestamp":1657154431838,"title":"Candado","code":"lockch01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989028.png","price": 120}, 
-    {"timestamp":1657154479730,"title":"Campana","code":"bellsm01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989073.png","price": 2860},
-    {"timestamp":1657257479730,"title":"Video Camara","code":"vidcam01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340787.png","price": 4990},
-    {"timestamp":1657257479760,"title":"Speaker bluetooth","code":"spkbth20w","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340824.png","price":4320},
-    {"timestamp":1657257479790,"title":"Celular 4G","code":"cel4g128gb","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340753.png","price":1280},
-    {"timestamp":1657257479820,"title":"Lampara Camping","code":"lampCamp5w","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340807.png","price":2300},
-    {"timestamp":1657257479870,"title":"Monocular 10x","code":"monmag10x","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340897.png","price":900},
-    {"timestamp":1657257479910,"title":"Molinillo cafe","code":"molicoffe01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340876.png","price":1700},
-    {"timestamp":1657257480130,"title":"Encendedor acero","code":"encace01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340907.png","price":3350},
+    {"timestamp":1657154380091,"title":"Lampara 12W","code":"LED12W","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989049.png","stock": 20,"price": 580},
+    {"timestamp":1657154431838,"title":"Candado","code":"lockch01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989028.png","stock": 10,"price": 120}, 
+    {"timestamp":1657154479730,"title":"Campana","code":"bellsm01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7989/7989073.png","stock": 5,"price": 2860},
+    {"timestamp":1657257479730,"title":"Video Camara","code":"vidcam01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340787.png","stock": 100,"price": 4990},
+    {"timestamp":1657257479760,"title":"Speaker bluetooth","code":"spkbth20w","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340824.png","stock": 50,"price":4320},
+    {"timestamp":1657257479790,"title":"Celular 4G","code":"cel4g128gb","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340753.png","stock": 2,"price":1280},
+    {"timestamp":1657257479820,"title":"Lampara Camping","code":"lampCamp5w","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340807.png","stock": 8,"price":2300},
+    {"timestamp":1657257479870,"title":"Monocular 10x","code":"monmag10x","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340897.png","stock": 10,"price":900},
+    {"timestamp":1657257479910,"title":"Molinillo cafe","code":"molicoffe01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340876.png","stock": 30,"price":1700},
+    {"timestamp":1657257480130,"title":"Encendedor acero","code":"encace01","thumbnail":"https://cdn-icons-png.flaticon.com/128/7340/7340907.png","stock": 1,"price":3350},
 ])
 
 db.mensajes.insertMany([
@@ -103,5 +103,4 @@ productos
 db.productos.deleteMany({price:{$lt:1000}})
 { "acknowledged" : true, "deletedCount" : 4 }
 
-> db.createUser({user:"pepe", pwd:"asd456", roles:["reader","ecommerce"]})
-
+> db.createUser({"user":"pepe", "pwd":"asd456", "roles":[{"role":"read","db":"ecommerce"}]})
