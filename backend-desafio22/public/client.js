@@ -1,4 +1,5 @@
 const socket = io()
+//const { normalize, schema, denormalize } = require("https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js");
 
 const formProduct = document.querySelector('#formProduct')
 const titleInput = document.querySelector('#titleInput')
@@ -54,9 +55,9 @@ function renderChat(messageInput) {
     try {
         const html = messageInput.map(messageValue => {
             return(`<div>
-                <div><span class=text-primary style='font-size:0.65rem; font-weight: bold'>${messageValue['mensajes'][0].author.timestamp} - 
-                <span style='font-size:0.75rem; color: brown;font-weight: normal'>${messageValue['mensajes'][0].author.id}: </span></span>
-                <em class="text-success text-wrap" style="width: 24rem;">${messageValue['mensajes'][0].text}</em>`)
+                <div><span class=text-primary style='font-size:0.65rem; font-weight: bold'>${messageValue.author.timestamp} - 
+                <span style='font-size:0.75rem; color: brown;font-weight: normal'>${messageValue.author.id}: </span></span>
+                <em class="text-success text-wrap" style="width: 24rem;">${messageValue.text}</em>`)
         }).join(" ");
         areaChat.innerHTML = html
     } catch(error) {

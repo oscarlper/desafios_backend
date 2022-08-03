@@ -7,6 +7,8 @@ const io = new IOServer(expressServer)
 const fs = require('fs');
 const fileName = 'chat.txt';
 
+const util = require('util')
+
 const mongoose = require('mongoose')
 const mongodbConfig = require('./db')
 
@@ -18,18 +20,17 @@ mongoose.connect(mongodbConfig.mongodb.connectionString)
 
 const authorSchema = new schema.Entity('authors')
 
-const mensajesSchema = new schema.Entity('mensajes', {
-    author: authorSchema
+
+const mensajeSchema = new schema.Entity('mensajesSchema', {
+    author: [authorSchema]
 })
 
-const schemaChatNormalizr = new schema.Entity('schemaDB', {
-    mensajes: mensajesSchema
+const schemaChatNormalizr = new schema.Entity('mensajes', {
+    mensajes: mensajeSchema
 })
 
 async function saveMessageMDB(inputMessage) {
-    mdb_mensaje.create([
-        { id: 'mensajes',
-        mensajes:[
+    mdb_mensaje.create(
             { author:{
                 timestamp: inputMessage.dateMark,
                 id: inputMessage.id,
@@ -40,10 +41,7 @@ async function saveMessageMDB(inputMessage) {
                 avatar: inputMessage.avatar,
             },
             text: inputMessage.message
-            }
-        ]
-        }
-    ])
+            })
 }
 
 const routerD22 = require('./desafio22')
@@ -53,10 +51,9 @@ app.use(express.urlencoded({ extended: true }))
 
 const Contenedor = require('./container')
 
-const { database, chatdb } = require('../src/db')
+const { database } = require('../src/db')
 
 const tableName = 'products';
-const tableMessageName = 'messages';
 
 const db = new Contenedor( database,tableName );
 
@@ -75,25 +72,6 @@ const createProductTable = async () => {
             })
             console.log("Table created");
             await insertProducts()
-        }
-    } catch (error) {
-        console.log(error);
-        database.destroy();
-}
-};
-
-const createMessageTable = async () => {
-    try {
-        const exists = await chatdb.schema.hasTable(tableMessageName)
-        if (!exists) {
-            await chatdb.schema
-            .createTable(tableMessageName, (table) => {
-                table.increments("id").primary();
-                table.timestamp("datemark");
-                table.string("mail",50);
-                table.string("message", 255);
-            })
-            console.log("Table created");
         }
     } catch (error) {
         console.log(error);
@@ -142,8 +120,6 @@ io.on('connection', async socket => {
 
     socket.on('server:chat', async inputMessage => {
         messages.push(
-            { id: 'mensajes',
-            mensajes:[
                 { author:{
                     timestamp: inputMessage.dateMark,
                     id: inputMessage.id,
@@ -155,8 +131,7 @@ io.on('connection', async socket => {
                 },
                 text: inputMessage.message
                 }
-            ]
-        })
+        )
 
         // Guardo mensajes en mongoDB
         await saveMessageMDB(inputMessage)
@@ -166,8 +141,6 @@ io.on('connection', async socket => {
          io.emit('server:chat', messages)
     })
 })
-
-
 
 async function saveMessages() {
     try {
@@ -179,20 +152,19 @@ async function saveMessages() {
 }
 
 ( async () => {
-    createMessageTable()
     createProductTable()
     try {
         // historial chat mongodb
-        let chatHist = await mdb_mensaje.find({})
+        let mensajes = await mdb_mensaje.find({},{__v:0,_id:0})
 
-        console.log('rawData: ', JSON.stringify(chatHist).length)
-        const normalizedData = normalize(chatHist, schemaChatNormalizr)
-        console.log('normalizedData: ', JSON.stringify(normalizedData).length)
+        const toNormalize = {id: 'mensajes',mensajes}
+        const normalizedData = normalize(toNormalize, schemaChatNormalizr)
         const deNormalizedData = denormalize(normalizedData, schemaChatNormalizr)
+        console.log('rawData: ', JSON.stringify(toNormalize).length)
+        console.log('normalizedData: ', JSON.stringify(normalizedData).length)
         console.log('denormalizedData: ', JSON.stringify(deNormalizedData).length)
 
-        //const chatHist= await chatdb.from(tableMessageName).select('*');
-        chatHist.forEach(element => {
+        mensajes.forEach(element => {
             messages.push(element)
         });
     } catch(e) {
