@@ -1,5 +1,4 @@
 const socket = io()
-//const { normalize, schema, denormalize } = require("https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js");
 
 const formProduct = document.querySelector('#formProduct')
 const titleInput = document.querySelector('#titleInput')
