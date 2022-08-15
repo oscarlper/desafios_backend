@@ -2,40 +2,23 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const { Server: IOServer } = require('socket.io')
-const expressServer = app.listen(8000, () => console.log('server ok !!!'))
+const expressServer = app.listen(3000, () => console.log('server ok !!!'))
 const io = new IOServer(expressServer)
-const fs = require('fs');
-const fileName = 'chat.txt';
+
+const MongoStore = require("connect-mongo");
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
 
 const util = require('util')
+
+let userName = 'NN'
 
 const mongoose = require('mongoose')
 const mongodbConfig = require('./db')
 
 const mdb_mensaje = require('./models/schemaMongodbChat')
 
-const { normalize, schema, denormalize } = require("normalizr");
-
 mongoose.connect(mongodbConfig.mongodb.connectionString)
-/*
-const authorSchema = new schema.Entity('authors')
-
-
-const mensajeSchema = new schema.Entity('mensajesSchema', {
-    author: [authorSchema]
-})
-
-const schemaChatNormalizr = new schema.Entity('mensajes', {
-    mensajes: mensajeSchema
-})
-*/
-
-const author = new schema.Entity("authors", {}, { idAttribute: "id" });
-
-const schemaMensajes = new schema.Entity(
-  "mensaje",
-  { author: author },
-);
 
 async function saveMessageMDB(inputMessage) {
     mdb_mensaje.create(
@@ -51,8 +34,6 @@ async function saveMessageMDB(inputMessage) {
             text: inputMessage.message
             })
 }
-
-const routerD22 = require('./desafio22')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -105,9 +86,68 @@ async function insertProducts() {
     }
 }
 
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(express.static(`${__dirname}/public`));
+app.use(express.json());
+app.use(cookieParser());
+app.use(
+  session({
+    store: MongoStore.create({
+      mongoUrl:
+        "mongodb+srv://mongodba:7ANW9tHm5OT7UHi4@cluster0.vtuqq.mongodb.net/desafio24?retryWrites=true&w=majority",
+    }),
+    secret: "coderhouse",
+    resave: false,
+    saveUninitialized: false,
+    rolling: true, // Reinicia el tiempo de expiracion con cada request
+    cookie: {
+      maxAge: 60000,
+    }, 
+  })
+);
 
-app.use('/api/productos-test', routerD22)
+function authMiddleware(req, res, next) {
+    if (req.session.username) {
+    userName=req.session.username
+    next();
+    } else {
+    res.redirect("/login");
+    }
+}
+
+function loginMiddleware(req, res, next) {
+    if (req.session.username) {
+    res.redirect("/");
+    } else {
+    next();
+    }
+}
+
+app.get("/", authMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, "/public/home.html"));
+});
+
+app.get("/login", loginMiddleware, (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/login.html"));
+});
+
+app.get("/api/login", async (req, res) => {
+    try {
+    req.session.username = req.query.username;
+
+    res.redirect("/");
+    } catch (err) {
+    res.json({ error: true, message: err });
+    }
+});
+
+app.get("/api/logout", async (req, res) => {
+    try {
+        req.session.destroy()
+        res.redirect("/");
+    } catch (err) {
+    res.json({ error: true, message: err });
+    }
+});
 
 app.use((req,res) => {
     res.status(404).json({ error : 'not found' })
@@ -116,6 +156,8 @@ app.use((req,res) => {
 io.on('connection', async socket => {
     console.log('Se conecto un usuario nuevo')
     socket.emit('server:chat', messages)
+
+    socket.emit('server:username', userName)
     
     socket.emit('server:products', await db.getAll())
     
@@ -143,9 +185,6 @@ io.on('connection', async socket => {
 
         // Guardo mensajes en mongoDB
         await saveMessageMDB(inputMessage)
-        // await chatdb.from(tableMessageName).insert({datemark: inputMessage.dateMark, mail: inputMessage.mail, message: inputMessage.message})
-        // chatdb.insert
-        
         io.emit('server:chat', messages)
     })
 })
@@ -165,18 +204,6 @@ async function saveMessages() {
         // historial chat mongodb
         let mensajes = await mdb_mensaje.find({},{__v:0})
         mensajes = JSON.parse(JSON.stringify(mensajes))
-        
-        const normalizedData = normalize({ id: "mensajes", mensajes }, schemaMensajes)
-        const deNormalizedData = denormalize(normalizedData, schemaMensajes)
-
-        console.log('rawData: ', JSON.stringify({id: 'mensajes', mensajes}).length)
-        console.log('normalizedData: ', JSON.stringify(normalizedData).length)
-        console.log('denormalizedData: ', JSON.stringify(deNormalizedData).length)
-
-        //console.log(util.inspect(deNormalizedData.entities.mensajes.mensajes,{depth:2}))
-        console.log(deNormalizedData.entities.mensaje.mensajes.mensajes)
-
-        
         mensajes.forEach(element => {
             messages.push(element)
         });
