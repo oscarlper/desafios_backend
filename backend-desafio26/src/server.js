@@ -155,7 +155,7 @@ const loginStrategy = new LocalStrategy(async (username, password, done) => {
     } else {
         if (!user) {
             routes.getFaillogin
-            //done("Invalid user", false)
+            done("Invalid user", false)
         } else {
             routes.getFaillogin
             done("Invalid credentials", false)
