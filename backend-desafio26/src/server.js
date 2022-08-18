@@ -126,7 +126,8 @@ const signupStrategy = new LocalStrategy(
         const existingUser = await User.findOne({ username });
 
         if (existingUser) {
-        return done("User already exists", false);
+        routes.getFailsignup
+        return done(null, false);
         }
 
         const newUser = {
@@ -153,16 +154,10 @@ const loginStrategy = new LocalStrategy(async (username, password, done) => {
     if (user && isValidPassword(password, user.password)) {
         return done(null, user);
     } else {
-        if (!user) {
-            routes.getFaillogin
-            done("Invalid user", false)
-        } else {
-            routes.getFaillogin
-            done("Invalid credentials", false)
-        }
+        routes.getFaillogin
+        return done(null, null)
     }
 });
-
 
 app.use(express.static(`${__dirname}/public`));
 app.use(express.json());

@@ -1,3 +1,5 @@
+const path = require('path')
+
 function getRoot(req, res) {}
 
 function getLogin(req, res) {
@@ -33,11 +35,11 @@ function postSignup(req, res) {
 }
 
 function getFaillogin(req, res) {
-  res.sendFile(__dirname + "/html/login-error.html");
+  res.render("login-error.ejs", {})
 }
 
 function getFailsignup(req, res) {
-  res.sendFile(__dirname + "/html/login-error.html");
+  res.render("signup-error.ejs", {})
 }
 
 function getLogout(req, res) {
