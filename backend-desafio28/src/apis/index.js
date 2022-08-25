@@ -26,7 +26,7 @@ api.get("/info", (req, res) => {
             'Argumentos de entrada':process.argv ,
             'Nombre de la plataforma': process.platform,
             'Versión de node.js': process.version,
-            'Memoria total reservada': process.memoryUsage(),
+            'Memoria total reservada': process.memoryUsage().rss,
             'Path de ejecución': process.execPath,
             'Process ID': process.pid,
             'Carpeta del proyecto': process.argv[1]
