@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const rutas = require('./routes/index')
+
 const puerto = 8888
 
 app.use(express.json())
