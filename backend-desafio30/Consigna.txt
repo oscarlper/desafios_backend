@@ -1,0 +1,161 @@
+> nodemon .\src\server.js 3000 fork
+
+> tasklist /fi "imagename eq node.exe"
+
+Nombre de imagen               PID Nombre de sesión Núm. de ses Uso de memor
+========================= ======== ================ =========== ============
+node.exe                     27516 Console                    1    31.932 KB
+node.exe                     44996 Console                    1    77.876 KB
+
+>nodemon .\src\server.js 3000 cluster
+
+>tasklist /fi "imagename eq node.exe"
+
+Nombre de imagen               PID Nombre de sesión Núm. de ses Uso de memor
+========================= ======== ================ =========== ============
+node.exe                     36176 Console                    1    31.984 KB
+node.exe                     40756 Console                    1    77.844 KB
+node.exe                     33612 Console                    1    77.328 KB
+node.exe                     40868 Console                    1    78.392 KB
+node.exe                      1544 Console                    1    76.832 KB
+node.exe                     25856 Console                    1    75.748 KB
+node.exe                     36276 Console                    1    77.148 KB
+node.exe                     19732 Console                    1    77.668 KB
+node.exe                     43068 Console                    1    78.176 KB
+node.exe                      5264 Console                    1    76.076 KB
+node.exe                     44788 Console                    1    77.208 KB
+node.exe                     29688 Console                    1    78.048 KB
+node.exe                     42236 Console                    1    76.700 KB
+node.exe                     36156 Console                    1    77.752 KB
+
+
+> forever -w .\src\server.js 3000 fork
+
+> tasklist /fi "imagename eq node.exe"
+
+Nombre de imagen               PID Nombre de sesión Núm. de ses Uso de memor
+========================= ======== ================ =========== ============
+node.exe                      8204 Console                    1    33.356 KB
+node.exe                     18528 Console                    1    56.556 KB
+
+> forever list
+
+info:    Forever processes running
+data:        uid  command                            script                                                                           forever pid   id logfile                      uptime
+data:    [0] 2n2i "C:\Program Files\nodejs\node.exe" F:\CODERHOUSE\backend\desafios_backend\backend-desafio30\src\server.js 3000 fork 292     42948    C:\Users\o\.forever\2n2i.log 0:0:0:45.16
+
+
+>forever -w .\src\server.js 3000 cluster
+
+>tasklist /fi "imagename eq node.exe"
+
+Nombre de imagen               PID Nombre de sesión Núm. de ses Uso de memor
+========================= ======== ================ =========== ============
+node.exe                     30632 Console                    1    42.136 KB
+node.exe                     44260 Console                    1    77.208 KB
+node.exe                     42872 Console                    1    78.020 KB
+node.exe                     42852 Console                    1    76.472 KB
+node.exe                     27784 Console                    1    76.524 KB
+node.exe                     17400 Console                    1    75.796 KB
+node.exe                     39372 Console                    1    76.948 KB
+node.exe                     18768 Console                    1    76.312 KB
+node.exe                     43456 Console                    1    76.904 KB
+node.exe                     17164 Console                    1    77.300 KB
+node.exe                     22248 Console                    1    77.248 KB
+node.exe                      4768 Console                    1    76.496 KB
+node.exe                     27720 Console                    1    77.608 KB
+node.exe                     39788 Console                    1    76.308 KB
+
+>forever list
+(node:38960) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:38960) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+info:    Forever processes running
+data:        uid  command                            script                                                                              forever pid   id logfile                      uptime
+data:    [0] RVf0 "C:\Program Files\nodejs\node.exe" F:\CODERHOUSE\backend\desafios_backend\backend-desafio30\src\server.js 3000 cluster 12388   42312    C:\Users\o\.forever\RVf0.log 0:0:0:7.659
+
+
+
+>pm2 start .\src\server.js -- 3000 fork --watch
+
+>tasklist /fi "imagename eq node.exe"
+
+Nombre de imagen               PID Nombre de sesión Núm. de ses Uso de memor
+========================= ======== ================ =========== ============
+node.exe                     41520 Console                    1    32.436 KB
+node.exe                     24984 Console                    1    58.808 KB
+
+>pm2 list
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ server             │ fork     │ 0    │ online    │ 0%       │ 83.7mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+
+>pm2 start .\src\server.js -- 3000 cluster --watch
+
+>tasklist /fi "imagename eq node.exe"
+
+Nombre de imagen               PID Nombre de sesión Núm. de ses Uso de memor
+========================= ======== ================ =========== ============
+node.exe                     43464 Console                    1    32.048 KB
+node.exe                     42732 Console                    1    58.764 KB
+node.exe                     38684 Console                    1    59.176 KB
+node.exe                     22276 Console                    1    59.828 KB
+node.exe                     44920 Console                    1    59.340 KB
+node.exe                     43968 Console                    1    59.176 KB
+node.exe                     18708 Console                    1    59.200 KB
+node.exe                     27640 Console                    1    59.444 KB
+node.exe                     43876 Console                    1    60.008 KB
+node.exe                     28128 Console                    1    60.048 KB
+node.exe                     39548 Console                    1    58.936 KB
+node.exe                     26264 Console                    1    60.096 KB
+node.exe                     41948 Console                    1    59.660 KB
+node.exe                     41988 Console                    1    59.532 KB
+
+>pm2 list
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ server             │ fork     │ 0    │ online    │ 0%       │ 85.4mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+
+
+>pm2 start .\src\server.js -- 8080 fork --watch
+>pm2 start .\src\server2.js -- 8081 cluster --watch
+
+>pm2 list
+PM2+ activated
+┌─────┬────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id  │ name       │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├─────┼────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 1   │ server     │ default     │ 1.0.0   │ fork    │ 43532    │ 10s    │ 0    │ online    │ 0%       │ 57.0mb   │ o        │ enabled  │
+│ 0   │ server2    │ default     │ 1.0.0   │ fork    │ 5236     │ 42s    │ 0    │ online    │ 0%       │ 32.6mb   │ o        │ enabled  │
+└─────┴────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+
+http {
+    include mime.types;
+    default_type application/octet-stream;
+
+    upstream node_app_cluster {
+        server 127.0.0.1:8081;
+    }
+
+    upstream node_app {
+        server 127.0.0.1:8082;
+    }
+
+    server {
+        listen 80;
+        server_name nginx_coderhouse;
+        #root /CODERHOUSE/backend/nginx/html
+
+        location /api/random {
+            proxy_pass http://node_app_cluster;
+        }
+
+        location / {
+            proxy_pass http://node_app;
+        }
+    }
+}
