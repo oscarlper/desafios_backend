@@ -1,0 +1,3 @@
+{"level":"error","message":"url: /faillogin - method: GET - Login error"}
+{"level":"error","message":"Username: oscar - Fail Login"}
+{"level":"error","message":"url: / - method: GET - User no logueado"}
