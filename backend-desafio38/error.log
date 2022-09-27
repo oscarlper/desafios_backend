@@ -1,0 +1,17 @@
+{"level":"error","message":"url: /faillogin - method: GET - Login error"}
+{"level":"error","message":"Username: oscar - Fail Login"}
+{"level":"error","message":"url: / - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1662991256754 - Username: coderhouse - Fail Login"}
+{"level":"error","message":"timestamp: 1662991261326 - Username: coderhouse - Fail Login"}
+{"level":"error","message":"timestamp: 1662991277587 - Username: coderhouse - Fail Login"}
+
+{"level":"error","message":"timestamp: 1663773120149 - Username: coderhouse - Fail Login"}
+{"level":"error","message":"timestamp: 1663773128346 - Username: oscarlper - Fail Login"}
+{"level":"error","message":"timestamp: 1663773319760 - Username: coderhouse - Fail Login"}
+{"level":"error","message":"timestamp: 1664230652230 - Username: coderhouse - Fail Login"}
+{"level":"error","message":"timestamp: 1664230656668 - Username: oscarlper3 - Fail Login"}
+{"level":"error","message":"timestamp: 1664230668080 - Username: tito20@gmail.com - Fail Login"}
+{"level":"error","message":"timestamp: 1664289235854 - Product table - Error: ReferenceError: tableName is not defined"}
+{"level":"error","message":"timestamp: 1664289255856 - Product table - Error: ReferenceError: tableName is not defined"}
+{"level":"error","message":"timestamp: 1664310517891 - Username: dsf - Fail Login"}
+{"level":"error","message":"timestamp: 1664311313191 - Username: oscarlper3 - Fail Login"}
