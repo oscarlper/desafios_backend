@@ -1,12 +1,10 @@
 # Test con Axios
 
-##>node ./axios-test.js
+## >node ./axios-test.js
 
-###TODOS LOS PRODUCTOS
-
+### TODOS LOS PRODUCTOS
 
 ``
-
 
 [
   {
@@ -121,7 +119,7 @@
 
 ``
 
-###SOLO PRODUCTO ID: 633b6b2a06ecd05b847e75b6
+### SOLO PRODUCTO ID: 633b6b2a06ecd05b847e75b6
 
 ``
 
@@ -139,7 +137,7 @@
 
 ``
 
-###SE CREA NUEVO PRODUCTO AXIOS Y SE LISTA
+### SE CREA NUEVO PRODUCTO AXIOS Y SE LISTA
 
 ``
 
@@ -158,7 +156,7 @@
 
 ``
 
-###SE MODIFICA NUEVO PRODUCTO
+### SE MODIFICA NUEVO PRODUCTO
 
 ``
 
@@ -176,7 +174,7 @@
 
 ``
 
-###SE BORRA NUEVO PRODUCTO
+### SE BORRA NUEVO PRODUCTO
 
 ``
 
@@ -293,18 +291,15 @@
 
 ``
 
+### TEST con Mocha Supertest y Chai
 
-###TEST con Mocha Supertest y Chai
+## >npm test
 
-##>npm test
+## >backend-desafio42@1.0.0 test
 
-##>backend-desafio42@1.0.0 test
+## >mocha ./api-test.js
 
-##>mocha ./api-test.js
-
-
-
-###Test sobre API REST FULL
+### Test sobre API REST FULL
 
 ``
 
