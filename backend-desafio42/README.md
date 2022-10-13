@@ -299,8 +299,6 @@
 
 ### >mocha ./api-test.js
 
-### Test sobre API REST FULL
-
 ```
 
     - POST /api/productos
