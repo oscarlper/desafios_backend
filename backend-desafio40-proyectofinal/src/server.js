@@ -214,8 +214,8 @@ app.get("/api/logout", async (req, res) => {
 
 
 //noauth ver CORS
-//app.use('/api/productos', userAuth.apiLogin, prodRouter)
-app.use('/api/productos', prodRouter)
+app.use('/api/productos', userAuth.apiLogin, prodRouter)
+//app.use('/api/productos', prodRouter)
 app.use('/api/carrito', userAuth.apiLogin, cartRouter)
 
 app.use((req,res) => {

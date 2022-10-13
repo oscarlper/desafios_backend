@@ -28,8 +28,8 @@ prodRouter.get("/:id", async (req, res) => {
 
 
 //noauth ver CORS
-//prodRouter.post('/', userAuth.isAdmin, async (req,res) => {
-prodRouter.post('/', async (req,res) => {
+prodRouter.post('/', userAuth.isAdmin, async (req,res) => {
+//prodRouter.post('/', async (req,res) => {
 
     const { title, price, code, thumbnail, stock } = req.body
     const timestamp = Date.now()
@@ -40,8 +40,8 @@ prodRouter.post('/', async (req,res) => {
 })
 
 //noauth ver CORS
-//prodRouter.delete('/:id', userAuth.isAdmin, async(req,res) => {
-prodRouter.delete('/:id', async(req,res) => {
+prodRouter.delete('/:id', userAuth.isAdmin, async(req,res) => {
+//prodRouter.delete('/:id', async(req,res) => {
     id = req.params.id
     const response = await productoDao.delProd(id)
 
@@ -50,8 +50,8 @@ prodRouter.delete('/:id', async(req,res) => {
 })
 
 //noauth ver CORS
-//prodRouter.put('/:id', userAuth.isAdmin, async (req,res) => {
-prodRouter.put('/:id', async (req,res) => {
+prodRouter.put('/:id', userAuth.isAdmin, async (req,res) => {
+//prodRouter.put('/:id', async (req,res) => {
     const id = req.params.id
     const title = req.body.title
     const code = req.body.code

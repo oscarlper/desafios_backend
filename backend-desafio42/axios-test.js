@@ -1,16 +1,27 @@
 import axios from "./axios.js";
 
+const login = async () => {
+    try {
+        const response = await axios.post(`/login`, {
+            username: 'tito20@gmail.com',
+            password: 'asd123',
+        });
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 const getProductAllProducts = async () => {
     try {
         const response = await axios.get(`/api/productos`, {
         });
-    
+
             console.log(response.data);
         } catch (err) {
             console.log(err);
         }
     };
-    
+
 const getProductOneProduct = async (id) => {
 try {
     const response = await axios.get(`/api/productos/${id}`, {
@@ -71,6 +82,7 @@ const deleteProduct = async (id) => {
     }
 }
 
+await login()
 console.log('TODOS LOS PRODUCTOS')
 await getProductAllProducts();
 console.log('SOLO PRODUCTO ID: 633b6b2a06ecd05b847e75b6')
