@@ -700,3 +700,185 @@
 {"level":"warn","message":"timestamp: 1665000867052 - url: /login2 method: GET - Not found"}
 {"level":"warn","message":"timestamp: 1665000903104 - url: /login2 method: GET - Not found"}
 {"level":"warn","message":"timestamp: 1665002865836 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665583895582 - url: /api/product method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665583898347 - url: /api/products method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665583921345 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665583928181 - url: /api/products method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665583930466 - url: /api/product method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665583942727 - url: /api/products method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665585438202 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585470695 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585477518 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585484891 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585492217 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585585200 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585702069 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585758980 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585811077 - url: /login2 method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665585826855 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585957992 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585982396 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585992598 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665585998999 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586082496 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586082505 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586091860 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586091870 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586096392 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586096402 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586099965 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586099975 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586134901 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586134911 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586169100 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586169110 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586221433 - url: /login?username=test@test.com&password=asd123 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586224753 - url: /login?username=test@test.com&password=asd123 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586230808 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586231639 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586237387 - url: /login?username=test@test.com&password=asd123 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586282582 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586291566 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665586881404 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665587866770 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665587870769 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665588326817 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588339089 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588368032 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588371718 - url: /api/login method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665588374320 - url: /api/login method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665588378212 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588393781 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588418242 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588418275 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665588429285 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588432502 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588591737 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588625973 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588632017 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588660320 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588709280 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665588742521 - url: /api/login method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665588774423 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665589092010 - url: /api/login method: POST - Not found"}
+{"level":"error","message":"timestamp: 1665589132099 - email: tito20@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1665589142917 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589162319 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589166368 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589175205 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589330733 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589386388 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589399979 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589407235 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589458693 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589473608 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589480130 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665589480154 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589485715 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589504105 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665589514548 - url: /api/login method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665589519595 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665589626864 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589725774 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589770314 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589777852 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589811810 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589837653 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589875178 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589875192 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589880247 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589886792 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589901498 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589916876 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589920791 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589921536 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589922161 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589922731 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665589929586 - url: /api/login method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665591106744 - url: /api/login method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665591115081 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665591192799 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665592982001 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665593049020 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665593061923 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665593229807 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665593384387 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665593464465 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665593487231 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665593561537 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665593590169 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665602318263 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665602318284 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665602321682 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665602321699 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665602322611 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665602322626 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665602340778 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665602340806 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1665603891684 - email: tito20@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1665603905078 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665603905095 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1665603909305 - email: tito20@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1665603909333 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665603909349 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665603914821 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665603914837 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665603919461 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665603919475 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665603925735 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665603925751 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604212430 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604212449 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604472168 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604472246 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604472248 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604638253 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604638270 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604883816 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604883836 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604894706 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604894721 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1665604902242 - email: tito20@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1665604902257 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665604902278 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1665604914807 - email: tito20@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1665604942013 - url: /api/login method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1665605022437 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665605120889 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665605125652 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665605130309 - url: /633b6b2a06ecd05b847e75b6 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1665605795677 - url: /api/productos method: PUT - Not found"}
+{"level":"warn","message":"timestamp: 1665608557721 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665608705403 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609166992 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609199168 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609242064 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609323683 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609347101 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609375548 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609394800 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609517700 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609571552 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665609781502 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665610003932 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665610059032 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665610076611 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665610088430 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665610880657 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665610918395 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665610955888 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611031835 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611212290 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611248837 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611274517 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611289831 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611314714 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611338767 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611367856 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665611386112 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665623459090 - url: /noroute method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665623673793 - url: /Unkown method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665623727022 - url: /Unkown method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665624308400 - url: /api/productos method: PUT - Not found"}
+{"level":"warn","message":"timestamp: 1665624308403 - url: /Unkown method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665624403464 - url: /Unkown method: GET - Not found"}

@@ -1,4 +1,6 @@
 import express from 'express'
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
 const app = express()
 import dotenv from 'dotenv'
 import path from 'path'
@@ -57,8 +59,16 @@ import User from './models/userModel.js'
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser());
 
 // comienza auth
+app.use(cors(
+    {
+        credentials: true,
+        origin: true,
+    }
+));
+
 app.use(
     session({
         secret: SESSION_SECRET,
@@ -202,7 +212,10 @@ app.get("/api/logout", async (req, res) => {
 // todas la funcionalidades de api requiere autenticacion y el filtrado 
 // por admin se realiza en routes/prodindex y cartindex
 
-app.use('/api/productos', userAuth.apiLogin, prodRouter)
+
+//noauth ver CORS
+//app.use('/api/productos', userAuth.apiLogin, prodRouter)
+app.use('/api/productos', prodRouter)
 app.use('/api/carrito', userAuth.apiLogin, cartRouter)
 
 app.use((req,res) => {

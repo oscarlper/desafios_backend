@@ -1,0 +1,31 @@
+{
+  "name": "backend-desafio42",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha ./api-test.js",
+    "start": "node ./axios-test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sispol/backend-ecommerce/issues"
+  },
+  "homepage": "https://github.com/sispol/backend-ecommerce#readme",
+  "dependencies": {
+    "agentkeepalive": "^4.2.1",
+    "axios": "^1.1.2",
+    "axios-cookiejar-support": "^4.0.3",
+    "chai": "^4.3.6",
+    "faker": "^5.5.3",
+    "faker-js": "^1.0.0",
+    "http": "^0.0.1-security",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.0",
+    "tough-cookie": "^4.1.2"
+  }
+}
