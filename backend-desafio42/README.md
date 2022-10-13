@@ -176,7 +176,7 @@
 
 ### SE BORRA NUEVO PRODUCTO
 
-``
+```
 
 [
   {
@@ -289,7 +289,7 @@
   }
 ]
 
-``
+```
 
 ### TEST con Mocha Supertest y Chai
 
@@ -301,7 +301,7 @@
 
 ### Test sobre API REST FULL
 
-``
+```
 
     - POST /api/productos
       √ Deberia devolver status 201 (67ms)
@@ -316,4 +316,4 @@
 
   5 passing (533ms)
 
-``
+```

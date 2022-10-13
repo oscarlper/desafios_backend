@@ -882,3 +882,4 @@
 {"level":"warn","message":"timestamp: 1665624308400 - url: /api/productos method: PUT - Not found"}
 {"level":"warn","message":"timestamp: 1665624308403 - url: /Unkown method: GET - Not found"}
 {"level":"warn","message":"timestamp: 1665624403464 - url: /Unkown method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1665631640590 - url: /login - method: GET - User no logueado"}
