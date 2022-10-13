@@ -1,7 +1,10 @@
-*** Test con Axios
+# Test con Axios
 
->node ./axios-test.js
-TODOS LOS PRODUCTOS
+##>node ./axios-test.js
+###TODOS LOS PRODUCTOS
+
+``
+
 [
   {
     _id: '62d588217a6ba0cb6301f377',
@@ -112,7 +115,13 @@ TODOS LOS PRODUCTOS
     price: 9482
   }
 ]
-SOLO PRODUCTO ID: 633b6b2a06ecd05b847e75b6
+
+``
+
+###SOLO PRODUCTO ID: 633b6b2a06ecd05b847e75b6
+
+``
+
 [
   {
     _id: '633b6b2a06ecd05b847e75b6',
@@ -124,7 +133,13 @@ SOLO PRODUCTO ID: 633b6b2a06ecd05b847e75b6
     price: 525
   }
 ]
-SE CREA NUEVO PRODUCTO AXIOS Y SE LISTA
+
+``
+
+###SE CREA NUEVO PRODUCTO AXIOS Y SE LISTA
+
+``
+
 { id: '634769e7a844ed51466ca2d0' }
 [
   {
@@ -137,7 +152,13 @@ SE CREA NUEVO PRODUCTO AXIOS Y SE LISTA
     price: 1000000
   }
 ]
-SE MODIFICA NUEVO PRODUCTO
+
+``
+
+###SE MODIFICA NUEVO PRODUCTO
+
+``
+
 [
   {
     _id: '634769e7a844ed51466ca2d0',
@@ -149,7 +170,13 @@ SE MODIFICA NUEVO PRODUCTO
     price: 2000000
   }
 ]
-SE BORRA NUEVO PRODUCTO
+
+``
+
+###SE BORRA NUEVO PRODUCTO
+
+``
+
 [
   {
     _id: '62d588217a6ba0cb6301f377',
@@ -261,17 +288,22 @@ SE BORRA NUEVO PRODUCTO
   }
 ]
 
-
-*** TEST con Mocha Supertest y Chai
-
->npm test
-
-> backend-desafio42@1.0.0 test
-> mocha ./api-test.js
+``
 
 
+###TEST con Mocha Supertest y Chai
 
-  Test sobre API REST FULL
+##>npm test
+
+##> backend-desafio42@1.0.0 test
+##> mocha ./api-test.js
+
+
+
+###Test sobre API REST FULL
+
+``
+
     - POST /api/productos
       √ Deberia devolver status 201 (67ms)
     - GET /api/productos
@@ -283,5 +315,6 @@ SE BORRA NUEVO PRODUCTO
     - GET Unkown
       √ Deberia devolver status 404
 
-
   5 passing (533ms)
+
+``
