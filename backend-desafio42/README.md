@@ -1,9 +1,12 @@
 # Test con Axios
 
 ##>node ./axios-test.js
+
 ###TODOS LOS PRODUCTOS
 
+
 ``
+
 
 [
   {
@@ -295,8 +298,9 @@
 
 ##>npm test
 
-##> backend-desafio42@1.0.0 test
-##> mocha ./api-test.js
+##>backend-desafio42@1.0.0 test
+
+##>mocha ./api-test.js
 
 
 
