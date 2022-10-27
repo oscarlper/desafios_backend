@@ -66,7 +66,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
 
 app.use(
-    "/graphql",
+    "/prod",
     graphqlHTTP({
         schema: productoSchema,
         rootValue: {

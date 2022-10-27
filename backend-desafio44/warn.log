@@ -913,3 +913,11 @@
 {"level":"warn","message":"timestamp: 1666215685971 - url: / - method: GET - User no logueado"}
 {"level":"warn","message":"timestamp: 1666215691597 - url: /login - method: GET - User no logueado"}
 {"level":"warn","message":"timestamp: 1666215695583 - url: /https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.IVxP28r6py0bNb_Q4Z46jAAAAA%26pid%3DApi&f=1&ipt=7bdf7769c6c14c0f403f6e0a0f66c8bf63b8c6672b042a7e1d81f8cd5dba86d6&ipo=images method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1666714835370 - url: /graphql/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1666715027045 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1666788282186 - url: /prod2/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1666788284353 - url: /prod2/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1666788291525 - url: /prod2/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1666788305269 - url: /prod2/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1666788306134 - url: /prod2/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1666788360796 - url: /prod2/ method: GET - Not found"}
