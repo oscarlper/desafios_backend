@@ -22,7 +22,8 @@ router.get("/", (ctx: Context): void => {
             </ol>
             <p style="margin-top: 2rem; font-family: Arial; font-size: 1rem; font-style: italic">
             Parametros:<br>
-            denon run --allow-net .\server.ts</p>
+            denon run --allow-net server.ts</p>
+            <a href="/parametros">Parametros Get Link</a>
         </body>
     </html>
   `;
@@ -37,7 +38,8 @@ router.get("/parametros", (ctx: Context): void => {
     <body>
         <p style="margin-top: 2rem; font-family: Arial; font-size: 2rem; font-style: italic">
         Parametros:<br>
-        denon run --allow-net .\server.ts</p>
+        denon run --allow-net server.ts</p>
+        <a href="/">Home</a>
     </body>
   </html>
   `;
